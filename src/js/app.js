@@ -34,24 +34,32 @@ function render(variables = {}) {
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name === null ? "Name" : variables.name} ${
-            variables.lastName === null ? "Last Name" : variables.lastName
-          }</h1>
+    variables.lastName === null ? "Last Name" : variables.lastName
+  }</h1>
                   <h2>${variables.role === null ? "Role" : variables.role}</h2>
                   <h3>${variables.city === null ? "City" : variables.city}, ${
-            variables.country === null ? "Country" : variables.country
-          }</h3>
+    variables.country === null ? "Country" : variables.country
+  }</h3>
                   <ul class="${variables.socialMediaPosition}">
                     <li><a href="${
-                      variables.twitter === null ? "Twitter" : variables.twitter
+                      variables.twitter === null
+                        ? "https://twitter.com/"
+                        : "https://twitter.com/" + variables.twitter
                     }"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="${
-                      variables.github === null ? "Git-gub" : variables.github
+                      variables.github === null
+                        ? "https://github.com/"
+                        : "https://github.com/" + variables.github
                     }"><i class="fab fa-github"></i></a></li>
                     <li><a href="${
-                      variables.linkedin === null ? "Linkedin" : variables.linkedin
+                      variables.linkedin === null
+                        ? "https://www.linkedin.com/"
+                        : "https://www.linkedin.com/" + variables.linkedin
                     }"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="${
-                      variables.instagram === null ? "Instagram" : variables.instagram
+                      variables.instagram === null
+                        ? "https://www.instagram.com/"
+                        : "https://www.instagram.com/" + variables.instagram
                     }"><i class="fab fa-instagram"></i></a></li>
                   </ul>
         </div>
